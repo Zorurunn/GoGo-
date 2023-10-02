@@ -20,12 +20,16 @@
     overflow: hidden;
 }
 
+
 /* highlight news style */
+
+/*
 .highlight-container {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
+*/
 
 .highlight-scroll-bar {
     position: absolute;
@@ -71,12 +75,13 @@
     transform: translateX(-75%);
 }
 
+/*
 .highlight-overflow {
     display: flex;
     width: 400%;
     transition: all 0.5s;
 }
-
+*/
 /*
 .highlight-overflow {
     animation: change-img-anim 10s;
@@ -131,12 +136,11 @@
     /* border: 5px solid red; */
 }
 
-
+/*
 .highlight-news {
     position: relative;
     width: 25%;
     height: 330px;
-    /* background-color: aqua; */
 }
 
 
@@ -150,7 +154,7 @@
 .highlight-news-details p {
     display: none;
 }
-
+*/
 .link-relatives {
     position: absolute;
     bottom: 110%;
@@ -189,14 +193,14 @@
     padding: 0px 5px 0px 5px;
 }
 
-.black-box {
+/* .black-box {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(5, 20, 33, 0.15);
     z-index: 1;
-}
-
+} */
+/*
 .highlight-news .highlight-news-image img {
     position: absolute;
     top: 0;
@@ -204,9 +208,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* opacity: 0.85%; */
 }
-
+*/
 /* ontsloh shine trend */
 
 .highlight-relatives {
@@ -258,3 +261,44 @@
     z-index: 3;
     color: #fff;
 }
+
+.highlight-scroll-bar,
+.highlight-relatives
+{
+display: none;}
+
+.highlight-overflow{
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+}
+
+.highlight-news{
+width: 100%;
+border: 10px solid red;
+position: relative;
+}
+
+.highlight-news-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+width: 100%;
+padding-top: 60%;
+position: relative;
+
+}
+
+.highlight-news-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+width: 100%;
+height: 100%;
+object-fit: covers;
+}
+
+.highlight-news-details{
+position: absolute;
+/* display: none */
+;}
