@@ -155,6 +155,8 @@
     display: none;
 }
 */
+
+/*
 .link-relatives {
     position: absolute;
     bottom: 110%;
@@ -166,7 +168,7 @@
     line-height: 1.4rem;
     z-index: 2;
 }
-
+*/
 
 .highlight-news-title {
     line-height: 22px;
@@ -263,42 +265,267 @@
 }
 
 .highlight-scroll-bar,
-.highlight-relatives
-{
-display: none;}
-
-.highlight-overflow{
-display: grid;
-
-grid-template-columns: repeat(4, 1fr);
+.highlight-relatives {
+    display: none;
 }
 
-.highlight-news{
-width: 100%;
-border: 10px solid red;
-position: relative;
+.highlight-overflow {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
 
-.highlight-news-image{
+.highlight-overflow .highlight-news:first-child {
+    grid-column: 1/ span 4;
+}
+
+.highlight-news {
+    width: 100%;
+    /* border: 10px solid red; */
+    position: relative;
+    padding-top: 100%;
+}
+
+.highlight-news-image {
     position: absolute;
     top: 0;
     left: 0;
-width: 100%;
-padding-top: 60%;
-position: relative;
+    width: 100%;
+    height: 60%;
 
 }
 
-.highlight-news-image img{
+.highlight-news-image img {
     position: absolute;
     top: 0;
     left: 0;
-width: 100%;
-height: 100%;
-object-fit: covers;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.highlight-news-details{
-position: absolute;
-/* display: none */
-;}
+.highlight-news-details {
+    /* position: absolute; */
+    /* display: none; */
+    /* display: none */
+}
+
+
+/* surtalchuilgaa  */
+.advertise-box {
+    width: 100%;
+    padding-top: 100%;
+    /* border: 10px solid red; */
+    position: relative;
+}
+
+.advertise-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.advertise-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 5px; */
+}
+
+/* nuurnii dood 4 mede */
+.highlight-news-details {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.link-relatives {
+    display: none;
+    background-image: linear-gradient(-120deg, #e08100, #c90027);
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px 7px 4px 7px;
+    font-size: 10px;
+    line-height: 1.4rem;
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+/* nuurnii ehnii medee */
+
+.first-news {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* .highlight-overflow .highlight-news:first-child {
+    width: 100%;
+    position: relative;
+    padding-top: 40%;
+    margin-bottom: 20px;
+}
+
+.highlight-news:first-child .link-relatives {
+    display: block;
+}
+
+.highlight-news:first-child .highlight-news-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+
+}
+
+.highlight-news:first-child .highlight-news-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+}
+
+
+.highlight-news:first-child .highlight-news-details h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.highlight-news:first-child .highlight-news-details p {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.highlight-news:first-child .highlight-news-details .link-relatives {
+    position: relative;
+} */
+
+
+
+.highlight-news-title {
+    color: #2a2222;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .highlight-news:first-child {
+        all: none;
+    }
+
+
+    .advertise-box {
+        display: none;
+    }
+
+    .highlight-scroll-bar,
+    .highlight-relatives {
+        display: none;
+    }
+
+    .highlight-container {
+        position: relative;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .highlight-overflow {
+        grid-template-columns: repeat(4, 100%);
+        grid-gap: 0;
+        transition: all 0.5s;
+    }
+
+    .highlight-overflow .highlight-news:first-child {
+        grid-column: none;
+    }
+
+    .highlight-news {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        border: 2px solid green;
+    }
+
+    .first-news-details {
+        position: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 0px;
+    }
+
+    .highlight-news-title {
+        color: #FFF;
+        font-size: 20px;
+    }
+
+
+
+    .highlight-news-image,
+    .first-news-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .highlight-news-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .highlight-news-details {
+        position: absolute;
+        left: 0;
+        bottom: 20%;
+        z-index: 2;
+    }
+
+
+    .highlight-news-details p {
+        display: none;
+    }
+
+    .black-box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(5, 20, 33, 0.15);
+        z-index: 1;
+        /* display: none; */
+    }
+
+    .highlight-news .highlight-news-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+}
