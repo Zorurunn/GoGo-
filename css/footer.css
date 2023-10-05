@@ -3,13 +3,28 @@
 }
 
 .links {
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
     padding-bottom: 20px;
 }
 
-.links ul li a {
-    padding: 1.5rem;
+.links .logo {
+    width: 200px;
+}
+
+.links .logo img {
+    width: 100%;
+}
+
+.intern-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.footer-link {
+    border: 2px solid green;
+    padding: 0px 20px 0px 20px;
 }
 
 .copyright {
