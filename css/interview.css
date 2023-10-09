@@ -30,11 +30,13 @@
 .interview-image-box {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .interview-image-box img {
     width: 100%;
     height: 100%;
+    transition: all 0.5s;
 }
 
 .interview-title-relative-grp {
@@ -43,6 +45,20 @@
     gap: 10px;
     z-index: 2;
     padding: 0px 20px 0px 20px;
+    overflow: hidden;
+}
+
+.interview-relatives {
+    background-color: #407ce8;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    transition: all 0.5s;
 }
 
 .interview-title {
@@ -52,6 +68,16 @@
     color: #fff;
 }
 
+/* title size */
+
+.interviews>div:nth-child(2)>.interview>.interview-title-relative-grp>a>.interview-title,
+.interviews>div:nth-child(3)>.interview>.interview-title-relative-grp>a>.interview-title,
+.interviews>div:nth-child(4)>.interview>.interview-title-relative-grp>a>.interview-title,
+.interviews>div:nth-child(5)>.interview>.interview-title-relative-grp>a>.interview-title {
+    font-size: 12px;
+    /* display: none; */
+}
+
 @media only screen and (max-width: 960px) {
 
 
@@ -59,4 +85,24 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+
+}
+
+@media only screen and (max-width: 640px) {
+    .interviews {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .interviews>div:first-child {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .interviews>div:nth-child(2)>.interview>.interview-title-relative-grp>a>.interview-title,
+    .interviews>div:nth-child(3)>.interview>.interview-title-relative-grp>a>.interview-title,
+    .interviews>div:nth-child(4)>.interview>.interview-title-relative-grp>a>.interview-title,
+    .interviews>div:nth-child(5)>.interview>.interview-title-relative-grp>a>.interview-title {
+        font-size: 18px;
+        /* display: none; */
+    }
 }
