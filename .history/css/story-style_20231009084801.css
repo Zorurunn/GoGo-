@@ -1,0 +1,103 @@
+/* .container {
+    width: 100vw;
+} */
+
+.story-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.story-block-box {
+    width: 100%;
+
+}
+
+.story-flex-box {
+    width: calc(2000% / 6);
+    display: flex;
+    gap: 15px;
+}
+
+.story-news {
+    position: relative;
+    flex-grow: 1;
+    border: 3px solid green;
+    border-radius: 5px;
+
+}
+
+
+.story-gogo-logo {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 2;
+}
+
+.story-txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    padding: 8px;
+    z-index: 2;
+}
+
+.story-txt>h3 {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 20%;
+}
+
+/* .story-news-title {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    left: 0;
+    bottom: 15%;
+    padding: 8px;
+    z-index: 2;
+} */
+
+.story-image-box {
+    width: 100%;
+    padding-top: 150%;
+
+    position: relative;
+}
+
+.story-image-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .story-flex-box {
+        width: calc(2000% / 3);
+    }
+
+    .story-image-box {
+        padding-top: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .story-flex-box {
+        width: calc(2000% / 2);
+    }
+
+    .story-image-box {
+        padding-top: 100%;
+    }
+}

@@ -1,0 +1,6 @@
+.hoverBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.8);
+}
