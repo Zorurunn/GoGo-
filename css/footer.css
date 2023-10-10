@@ -2,6 +2,11 @@
     padding: 50px 0px 50px 0px;
 }
 
+.footer-middle-line {
+    border: 1px solid #888;
+}
+
+
 .links {
     /* justify-content: space-between; */
     padding-bottom: 20px;
@@ -29,4 +34,25 @@
 
 .copyright {
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 650px) {
+    .gogo-footer>.links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .intern-links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

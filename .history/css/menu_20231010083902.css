@@ -1,0 +1,84 @@
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hb-check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 8;
+    opacity: 0.3;
+    border: px solid red;
+    /* margin-top: 30px; */
+}
+
+.hb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid green;
+    z-index: 5;
+    display: none;
+    width: 100%;
+    /* margin-top: 30px; */
+}
+
+.hb>.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 1);
+    visibility: hidden;
+    overflow-y: auto;
+}
+
+.hb-check:checked+.hb {
+    display: block;
+}
+
+.hb-check:checked+.hb>.box {
+    visibility: visible;
+}
+
+.hb-check:not(:checked) {
+    visibility: hidden;
+}
+
+.hb-check:checked {
+    visibility: visible;
+}
+
+.none-scroll:has(.hb-check:checked)~div {
+    display: none;
+}
+
+/* hamburger bairluulah */
+.hb>i {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 960px) {
+    .hb-check {
+        visibility: visible !important;
+    }
+
+    .hb {
+        display: block;
+    }
+
+    .hb-check:checked+.hb>.box {
+        visibility: visible;
+    }
+
+    .none-scroll:has(.hb-check:checked)~div {
+        display: none;
+    }
+
+}

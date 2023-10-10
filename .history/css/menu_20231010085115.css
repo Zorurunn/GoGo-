@@ -1,0 +1,191 @@
+.hb-check {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 8;
+    opacity: 0.3;
+    border: px solid red;
+    /* margin-top: 30px; */
+}
+
+.hb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid green;
+    z-index: 5;
+    display: none;
+    width: 100%;
+    /* margin-top: 30px; */
+}
+
+.hb>.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 1);
+    visibility: hidden;
+    overflow-y: scroll;
+}
+
+.hb-check:checked+.hb {
+    display: block;
+}
+
+.hb-check:checked+.hb>.box {
+    visibility: visible;
+}
+
+.hb-check:not(:checked) {
+    visibility: hidden;
+}
+
+.hb-check:checked {
+    visibility: visible;
+}
+
+.none-scroll:has(.hb-check:checked)~div {
+    display: none;
+}
+
+/* hamburger bairluulah */
+.hb>i {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 52.5px;
+    z-index: 5;
+    border: 2px solid green;
+}
+
+.hb-nav {
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+    justify-content: flex-start;
+}
+
+.hb-search-bar {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+.hb-search-bar .hb-input {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 2px solid blue;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.hb-search-bar>button {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 80px;
+    height: 90%;
+    cursor: pointer;
+}
+
+.menu .additions {
+    gap: 5px;
+}
+
+.menu .addition {
+    flex-grow: 1;
+    border: 2px solid green;
+}
+
+.hb-link-relative {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border: 5px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.hb-link-relative>i {
+    padding-left: 10px;
+    font-size: 18px;
+
+}
+
+.hb-link-relative>input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 6;
+}
+
+.hb-link-relative>input:checked~i {
+    transform: rotate(90deg);
+}
+
+.hb-link-relative:has(input:checked)+ul {
+    display: block;
+}
+
+.hb-link-relative+ul {
+    /* transition: all 0.5s; */
+    display: none;
+
+}
+
+.hb-link-relative+ul>li {
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 10px 0px 10px 0px;
+}
+
+.hb-link-relative+ul>li::before {
+    content: "\2022";
+    padding-right: 10px;
+}
+
+.hb-icons {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 5px; */
+}
+
+.hb-icon {
+
+    /* flex-grow: 1; */
+    border: 5px solid red;
+    width: 80px;
+    height: 80px;
+}
+
+@media only screen and (max-width: 960px) {
+    .hb-check {
+        visibility: visible !important;
+    }
+
+    .hb {
+        display: block;
+    }
+
+    .hb-check:checked+.hb>.box {
+        visibility: visible;
+    }
+
+    .none-scroll:has(.hb-check:checked)~div {
+        display: none;
+    }
+
+}
